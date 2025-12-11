@@ -21,9 +21,9 @@ struct PaperView: View {
                         preview: SharePreview(vm.cartelText, image: ShareableImage(image: screenshot))
                     ) {
                         Image(.papier)
-                            .resizable()
-                            .scaledToFit()
-                            .frame(width: 200)
+                                .resizable()
+                                .scaledToFit()
+                                .frame(width: 200)
                     }
                     .offset(x: 70, y: 100)
                     .rotationEffect(Angle(degrees: -20))
