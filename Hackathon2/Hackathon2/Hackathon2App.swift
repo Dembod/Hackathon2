@@ -6,12 +6,19 @@
 //
 
 import SwiftUI
+import Photos
 
 @main
-struct Hackathon2App: App {
+struct testApp: App {
+    @State var vm = ViewModel()
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            if vm.authorizationStatus == .authorized || vm.authorizationStatus == .limited {
+                ImageView().environment(vm)
+            } else {
+                AuthorizationView().environment(vm)
+            }
         }
     }
 }
