@@ -1,0 +1,68 @@
+# Xcode
+.DS_Store
+build/
+DerivedData/
+
+# User settings
+xcuserdata/
+*.xcuserstate
+
+# IDE files
+*.xcworkspace/xcuserdata
+*.moved-aside
+*.xccheckout
+*.xcscmblueprint
+
+# Swift Package Manager
+.swiftpm/
+.build/
+
+# CocoaPods
+Pods/
+Podfile.lock
+# If you want to track Podfile.lock, remove the line above
+
+# Carthage
+Carthage/Build/
+
+# Accio
+Dependencies/
+.accio/
+
+# Fastlane
+fastlane/report.xml
+fastlane/Preview.html
+fastlane/screenshots/**/*.png
+fastlane/test_output/
+
+# Archives
+*.xcarchive
+
+# Swift / Obj-C artifacts
+*.dSYM.zip
+*.dSYM
+
+# Playground files
+timeline.xctimeline
+playground.xcworkspace
+
+# Provisioning profiles
+*.mobileprovision
+*.provisionprofile
+
+# Simulator data
+*.simstate
+
+# Logs
+*.log
+
+# Generated files
+*.pch
+*.hmap
+
+# App artifacts
+*.ipa
+*.app
+
+# SPM resolved file (optional)
+Package.resolved
