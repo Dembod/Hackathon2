@@ -21,6 +21,10 @@ class ViewModel {
     // texte du cartel
     var cartelText: String = ""
     
+    // screenshot
+    var screenshot: UIImage?
+    var screenshotToShare: UIImage?
+    var isTakingScreenshot: Bool = false
     
     
     // fonctions

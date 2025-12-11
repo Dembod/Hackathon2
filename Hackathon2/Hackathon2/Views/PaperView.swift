@@ -15,16 +15,24 @@ struct PaperView: View {
             Spacer()
             HStack {
                 Spacer()
-                if let randomImage = vm.randomImage {
-                    ShareLink(item: ShareableImage(image: randomImage), preview: SharePreview(vm.cartelText, image: ShareableImage(image: randomImage))) {
-                            Image(.papier)
-                                .resizable()
-                                .scaledToFit()
-                                .frame(width: 200)
+                if let screenshot = vm.screenshot {
+                    ShareLink(
+                        item: ShareableImage(image: screenshot),
+                        preview: SharePreview(vm.cartelText, image: ShareableImage(image: screenshot))
+                    ) {
+                        Image(.papier)
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width: 200)
                     }
                     .offset(x: 70, y: 100)
                     .rotationEffect(Angle(degrees: -20))
                     .buttonStyle(AnimatedButtonStyle())
+                    
+                    .simultaneousGesture(TapGesture()
+                        .onEnded { _ in
+                            vm.isTakingScreenshot = true
+                        })
                 }
 
 //                    let renderer = ImageRenderer(content: ImageGalleryView())
@@ -34,8 +42,4 @@ struct PaperView: View {
             }
         }
     }
-}
-
-#Preview {
-    PaperView()
 }

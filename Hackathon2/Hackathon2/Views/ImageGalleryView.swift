@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import ScreenshotSwiftUI
 
 struct ImageGalleryView: View {
     @Environment(ViewModel.self) var vm
@@ -30,6 +31,15 @@ struct ImageGalleryView: View {
                                 ImageView(displayedImage: image)
                                 CartelView(text: vm.cartelText)
                             }
+                            .background {
+                                if vm.isTakingScreenshot {
+                                    Image(.papierPeint)
+                                }
+                            }
+                            .screenshotMaker { screenshotMaker in
+                                vm.screenshot = screenshotMaker.screenshot()
+                            }
+                            
                             Spacer()
                             TextField("Légende", text: $vm.cartelText)
                                 .padding(10)
@@ -41,7 +51,7 @@ struct ImageGalleryView: View {
                                         .foregroundStyle(.clear)
                                 )
                         }
-                        
+                                                
                         Button(action: vm.loadRandomPhoto) {
                             Image(.sonnette)
                                 .resizable()
@@ -50,7 +60,7 @@ struct ImageGalleryView: View {
                         }
                         .buttonStyle(AnimatedButtonStyle())
                         .disabled(vm.isLoading)
-                        
+                                                
                     }
                     .padding(.top, 40)
                     .padding()
