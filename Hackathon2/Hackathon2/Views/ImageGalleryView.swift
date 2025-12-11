@@ -6,7 +6,6 @@
 //
 
 import SwiftUI
-import ScreenshotSwiftUI
 
 struct ImageGalleryView: View {
     @Environment(ViewModel.self) var vm
@@ -31,11 +30,7 @@ struct ImageGalleryView: View {
                                 ImageView(displayedImage: image)
                                 CartelView(text: vm.cartelText)
                             }
-                            .background {
-                                if vm.isTakingScreenshot {
-                                    Image(.papierPeint)
-                                }
-                            }
+                            .padding()
                             .screenshotMaker { screenshotMaker in
                                 vm.screenshot = screenshotMaker.screenshot()
                             }

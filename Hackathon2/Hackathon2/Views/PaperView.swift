@@ -29,10 +29,6 @@ struct PaperView: View {
                     .rotationEffect(Angle(degrees: -20))
                     .buttonStyle(AnimatedButtonStyle())
                     
-                    .simultaneousGesture(TapGesture()
-                        .onEnded { _ in
-                            vm.isTakingScreenshot = true
-                        })
                 }
 
 //                    let renderer = ImageRenderer(content: ImageGalleryView())

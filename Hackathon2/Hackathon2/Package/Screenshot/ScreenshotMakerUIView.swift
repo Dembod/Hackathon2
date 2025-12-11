@@ -18,7 +18,7 @@ public class ScreenshotMakerUIView: UIView, ScreenshotMaker {
         let renderer = UIGraphicsImageRenderer(bounds: captureBounds)
         
         // REMPLACEZ "BackgroundImageName" par le nom de votre image dans Assets.xcassets
-        let backgroundImage = UIImage(named: "BackgroundImageName") 
+        let backgroundImage = UIImage(named: "papierPeint")
         
         return renderer.image { (context) in
             

@@ -6,10 +6,6 @@
 	objectVersion = 77;
 	objects = {
 
-/* Begin PBXBuildFile section */
-		43A465C62EEB0F6C0086FC46 /* ScreenshotSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 43A465C52EEB0F6C0086FC46 /* ScreenshotSwiftUI */; };
-/* End PBXBuildFile section */
-
 /* Begin PBXFileReference section */
 		D3CD469F2EEAD2D20028EC40 /* Hackathon2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hackathon2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -40,7 +36,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				43A465C62EEB0F6C0086FC46 /* ScreenshotSwiftUI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,7 +78,6 @@
 			);
 			name = Hackathon2;
 			packageProductDependencies = (
-				43A465C52EEB0F6C0086FC46 /* ScreenshotSwiftUI */,
 			);
 			productName = Hackathon2;
 			productReference = D3CD469F2EEAD2D20028EC40 /* Hackathon2.app */;
@@ -114,7 +108,6 @@
 			mainGroup = D3CD46962EEAD2D20028EC40;
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
-				43A465C42EEB0F6C0086FC46 /* XCRemoteSwiftPackageReference "ScreenshotSwiftUI" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = D3CD46A02EEAD2D20028EC40 /* Products */;
@@ -358,25 +351,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		43A465C42EEB0F6C0086FC46 /* XCRemoteSwiftPackageReference "ScreenshotSwiftUI" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/gualtierofrigerio/ScreenshotSwiftUI.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 0.3.0;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		43A465C52EEB0F6C0086FC46 /* ScreenshotSwiftUI */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 43A465C42EEB0F6C0086FC46 /* XCRemoteSwiftPackageReference "ScreenshotSwiftUI" */;
-			productName = ScreenshotSwiftUI;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = D3CD46972EEAD2D20028EC40 /* Project object */;
 }
