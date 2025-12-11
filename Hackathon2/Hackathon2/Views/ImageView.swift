@@ -1,5 +1,5 @@
 //
-//  ImageView.swift
+//  Untitled.swift
 //  Hackathon2
 //
 //  Created by Anne Ferret on 11/12/2025.
@@ -8,43 +8,31 @@
 import SwiftUI
 
 struct ImageView: View {
-    @Environment(ViewModel.self) var vm
-
+    var displayedImage: UIImage = .test
+    
     var body: some View {
         
-        VStack(spacing: 20) {
+        ZStack {
             
-            if let image = vm.randomImage {
-                Image(uiImage: image)
-                    .resizable()
-                    .scaledToFit()
-                    .frame(maxWidth: 350, maxHeight: 350)
-            }
-            
-            if let error = vm.errorMessage {
-                Text(error)
-                    .foregroundColor(.red)
-                    .font(.caption)
-                    .padding(.horizontal)
-            }
-            
-            Button(action: vm.loadRandomPhoto) {
-                HStack {
-                    if vm.isLoading {
-                        ProgressView()
-                            .progressViewStyle(CircularProgressViewStyle(tint: .white))
-                    } else {
-                        Text("Une photo au hasard")
-                    }
-                }
-            }
-            .disabled(vm.isLoading)
+            Image(uiImage: displayedImage)
+                .resizable()
+                .aspectRatio(contentMode: .fill)
+                .frame(width: 260, height: 220, alignment: .center)
+                .clipped()
+                .id(displayedImage)
+                .transition(.opacity)
+                        
+            Image(.cadre)
+                .resizable()
+                .scaledToFit()
+                .frame(width: 340)
             
         }
-        .padding()
+        .animation(.easeInOut(duration: 0.5), value: displayedImage)
+
     }
 }
 
 #Preview {
-    ImageView().environment(ViewModel())
+    ImageView()
 }

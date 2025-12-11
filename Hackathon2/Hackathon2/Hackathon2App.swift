@@ -15,7 +15,7 @@ struct testApp: App {
     var body: some Scene {
         WindowGroup {
             if vm.authorizationStatus == .authorized || vm.authorizationStatus == .limited {
-                ImageView().environment(vm)
+                ImageGalleryView().environment(vm)
             } else {
                 AuthorizationView().environment(vm)
             }
