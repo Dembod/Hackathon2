@@ -10,9 +10,22 @@
 		D3CD469F2EEAD2D20028EC40 /* Hackathon2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hackathon2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		43A464D42EEAF5FF0086FC46 /* Exceptions for "Hackathon2" folder in "Hackathon2" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = D3CD469E2EEAD2D20028EC40 /* Hackathon2 */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		D3CD46A12EEAD2D20028EC40 /* Hackathon2 */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				43A464D42EEAF5FF0086FC46 /* Exceptions for "Hackathon2" folder in "Hackathon2" target */,
+			);
 			path = Hackathon2;
 			sourceTree = "<group>";
 		};
@@ -256,6 +269,7 @@
 				DEVELOPMENT_TEAM = 3LU75T9498;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Hackathon2/Info.plist;
 				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "e need access to your full photo library to display a random photo.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -289,6 +303,7 @@
 				DEVELOPMENT_TEAM = 3LU75T9498;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Hackathon2/Info.plist;
 				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "e need access to your full photo library to display a random photo.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;

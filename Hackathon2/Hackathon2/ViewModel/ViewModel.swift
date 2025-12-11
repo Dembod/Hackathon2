@@ -18,6 +18,9 @@ class ViewModel {
     // image au hasard
     var randomImage: UIImage?
     
+    // texte du cartel
+    var cartelText: String = ""
+    
     
     
     // fonctions

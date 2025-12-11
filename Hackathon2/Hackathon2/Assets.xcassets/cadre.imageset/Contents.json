@@ -1,8 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "cadre1765450066.png",
-      "idiom" : "universal"
+      "filename" : "cadre.svg",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "3x"
     }
   ],
   "info" : {

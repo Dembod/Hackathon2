@@ -17,15 +17,19 @@ struct ImageView: View {
             Image(uiImage: displayedImage)
                 .resizable()
                 .aspectRatio(contentMode: .fill)
-                .frame(width: 260, height: 220, alignment: .center)
+                .frame(width: 295, height: 245, alignment: .center)
                 .clipped()
+                .id(displayedImage)
+                .transition(.opacity)
                         
             Image(.cadre)
                 .resizable()
                 .scaledToFit()
-                .frame(width: 400)
+                .frame(width: 380)
             
         }
+        .animation(.easeInOut(duration: 0.5), value: displayedImage)
+
     }
 }
 
