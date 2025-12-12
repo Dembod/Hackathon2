@@ -18,11 +18,14 @@ class ViewModel {
     // image au hasard
     var randomImage: UIImage?
     
+    // delais texte clic
+    var isPresented: Bool = false
+    
     // texte du cartel
     var cartelText: String = ""
     
     // screenshot
-    var screenshot: UIImage?    
+    var screenshot: UIImage?
     
     // fonctions
     
