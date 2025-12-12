@@ -9,21 +9,42 @@ import SwiftUI
 
 struct AuthorizationView: View {
     @Environment(ViewModel.self) var vm
-
+    
     var body: some View {
         
-        VStack(spacing: 20) {
+        
+        ZStack {
             
-            Text("L'accès à la librairie de photos est requis pour cette application.")
-                .multilineTextAlignment(.center)
-                .foregroundColor(.secondary)
-            
-            Button("Autoriser") {
-                vm.requestPhotoLibraryAccess()
+            VStack(spacing: 20) {
+                
+                Text("Sois gentil·le, laisse nous voir ta galerie photos... 😈")
+                    .multilineTextAlignment(.center)
+                    .foregroundColor(.white)
+                    .font(.headline)
+                
+                
+                Button("Ouvre nous ta porte") {
+                    vm.requestPhotoLibraryAccess()
+                }
+                .foregroundStyle(.yellow)
+                .bold()
+                
             }
+            .padding()
+            .background(.porteCouleur.opacity(0.7))
+            .clipShape(RoundedRectangle(cornerRadius: 20)
+            )
             
         }
-        .padding()
+        .frame(maxHeight: .infinity)
+        .background {
+            Image(.porte)
+                .resizable()
+                .scaledToFill()
+                .ignoresSafeArea()
+                .offset(x:-51)
+        }
+        
     }
 }
 

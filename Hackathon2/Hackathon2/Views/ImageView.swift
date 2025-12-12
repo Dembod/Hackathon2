@@ -21,7 +21,7 @@ struct ImageView: View {
                 .clipped()
                 .id(displayedImage)
                 .transition(.opacity)
-                        
+            
             Image(.cadre)
                 .resizable()
                 .scaledToFit()
@@ -29,7 +29,7 @@ struct ImageView: View {
             
         }
         .animation(.easeInOut(duration: 0.5), value: displayedImage)
-
+        
     }
 }
 

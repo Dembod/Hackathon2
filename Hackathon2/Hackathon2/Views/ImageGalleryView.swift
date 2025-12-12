@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ImageGalleryView: View {
     @Environment(ViewModel.self) var vm
-
+    
     var body: some View {
         @Bindable var vm = vm
         
@@ -36,7 +36,7 @@ struct ImageGalleryView: View {
                             }
                             
                             Spacer()
-                            TextField("Légende", text: $vm.cartelText)
+                            TextField("Ajoute ta légende", text: $vm.cartelText)
                                 .padding(10)
                                 .background(.fond)
                                 .cornerRadius(16)
@@ -46,7 +46,7 @@ struct ImageGalleryView: View {
                                         .foregroundStyle(.clear)
                                 )
                         }
-                                                
+                        
                         Button(action: vm.loadRandomPhoto) {
                             Image(.sonnette)
                                 .resizable()
@@ -55,7 +55,7 @@ struct ImageGalleryView: View {
                         }
                         .buttonStyle(AnimatedButtonStyle())
                         .disabled(vm.isLoading)
-                                                
+                        
                     }
                     .padding(.top, 40)
                     .padding()
@@ -69,7 +69,20 @@ struct ImageGalleryView: View {
             }
             
         } else {
-            VStack {
+            ZStack {
+                VStack {
+                    ZStack {
+                        Text("DaguerroMachin")
+                            .foregroundStyle(Color.gray.opacity(0.8))
+                        
+                        
+                        Text("DaguerroMachin")
+                            .offset(x: -3, y: -3)
+                    }
+                    .font(.custom("Leander", size: 50 ))
+                    .padding(.top, 40)
+                    Spacer()
+                }
                 Button(action: vm.loadRandomPhoto) {
                     Image(.sonnette)
                         .resizable()
@@ -78,12 +91,34 @@ struct ImageGalleryView: View {
                 }
                 .buttonStyle(AnimatedButtonStyle())
                 .disabled(vm.isLoading)
+                
+                if vm.isPresented {
+                    VStack {
+                        Spacer()
+                        VStack {
+                            Text("Vas-y CLIQUE !")
+                                .font(.custom("Leander", size: 40))
+                            
+                            Text("N'aie pas peur...")
+                                .font(.custom("Leander", size: 20))
+                        }
+                        .padding()
+                        .background(.fond)
+                        .clipShape(RoundedRectangle(cornerRadius: 20))
+                        .shadow(color: Color.gray, radius: 10)
+                        .padding(.bottom, 30)
+                    }
+                }
+            }
+            .task {
+                try? await Task.sleep(nanoseconds: 10_000_000_000)
+                vm.isPresented = true
             }
             .background {
                 Image(.papierPeint)
             }
         }
-
+        
     }
 }
 
